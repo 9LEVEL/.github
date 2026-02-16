@@ -40,18 +40,6 @@ Adoramos contribuições da comunidade! Veja como ajudar:
 - 📧 [Email](mailto:comercial@9level.com.br)
 - 📺 [YouTube](https://youtube.com/@9level)
 
-## 👨‍💻 Fundador
-
-<div align="center">
-  <a href="https://github.com/julianol1berato">
-    <img src="https://github.com/julianol1berato.png" width="100" height="100" style="border-radius: 50%;">
-  </a>
-  <h3>Juliano Liberato</h3>
-  <p>CEO & Founder</p>
-  
-  [![GitHub](https://img.shields.io/badge/GitHub-julianol1berato-181717?logo=github)](https://github.com/julianol1berato)
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-juliano--liberato-0077B5?logo=linkedin)](https://linkedin.com/in/juliano-liberato)
-</div>
 
 
 ## 💙 Apoie Nosso Trabalho
