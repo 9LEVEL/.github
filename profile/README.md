@@ -78,7 +78,7 @@ A **Enterprise Edition** adiciona:
 
 ## Por que 9LEVEL?
 
-Não somos um MSP tradicional nem uma software house genérica. Cada produto nasce de um problema real enfrentado na gestão de **1.300+ dispositivos** com EDR, XDR e NAC num escritório bancário em Joinville, SC.
+Não somos um MSP tradicional nem uma software house genérica. Cada produto nasce de um problema real enfrentado na gestão de ambiente produtivo e dores de quem vive skin the game.
 
 Construímos o que usamos. Abrimos o que podemos.
 
