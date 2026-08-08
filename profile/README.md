@@ -4,98 +4,85 @@
 
 **Infraestrutura inteligente para quem não pode parar**
 
-Ferramentas open source para infraestrutura corporativa.  
-Go + Vue.js + PostgreSQL.
-
----
+Ferramentas open source, em Go, para operar infraestrutura crítica —
+binário único, zero dependências, roda no seu ambiente.
 
 </div>
 
-## Nossas Soluções
+---
 
-Cinco produtos que cobrem o ciclo completo de gestão de TI para setores regulados — do monitoramento à conformidade.
+## Nossas soluções
 
-| Produto | O que resolve | Stack | Modelo | Status |
-|---------|--------------|-------|--------|--------|
-| **[9level-monitor](https://github.com/9LEVEL/9level-monitor)** | Monitoramento real-time de PBX Asterisk — MOS, jitter, RTT, endpoints PJSIP, alertas de segurança | Go · Vue.js · PostgreSQL | Open-core (MIT) | `v1.0.0` |
-| **[lgpd-consent](https://github.com/9LEVEL/lgpd-consent)** | Gerenciamento de cookies/consentimento LGPD (Lei 13.709/18). 3 arquivos, zero deps, 100% pt-BR | JS puro | Open source (MIT) | `Publicado` |
-| **Corely** | PSA/sistema de chamados — tickets, clientes, contratos, SLA automático, multi-tenant | Go · Vue.js · PostgreSQL | SaaS / On-prem | `Em dev` |
-| **9Track** | Analytics comportamental com Sankey + cadeia de Markov. Funil de conversão e comportamento | Go · Vue.js · PostgreSQL | SaaS | `Em dev` |
-| **AD Unlock** | Desbloqueio de contas Active Directory via Microsoft Graph API com auditoria | Go · Vue.js | On-prem | `Produção` |
+Quatro produtos **open source (MIT)** que resolvem dores reais de quem opera
+ambiente de produção — do monitoramento de frota à administração de banco.
+Todos rodam self-hosted, sem SaaS obrigatório e sem prender seus dados.
+
+| Produto | O que resolve | Stack | Status |
+|---------|---------------|-------|--------|
+| **[sysmon](https://github.com/9LEVEL/sysmon)** | Painel de todas as suas máquinas Linux na área de trabalho — fica vermelho quando um host esquenta, enche ou cai. Sem servidor, sem banco, sem nuvem | Go | MIT · `v5.7.1` |
+| **[pgtui](https://github.com/9LEVEL/pgtui)** | Administração de PostgreSQL no terminal (o *k9s do Postgres*) — sessões, roles/grants, databases e tuning (advisor, `ALTER SYSTEM`, editor de `pg_hba`) | Go | MIT · `v0.5.0` |
+| **[9level-monitor](https://github.com/9LEVEL/9level-monitor)** | Monitoramento real-time de PBX Asterisk — MOS, jitter, RTT, endpoints PJSIP e eventos de segurança, via AMI + ARI | Go | MIT · `v2.0.0` |
+| **[lgpd-consent](https://github.com/9LEVEL/lgpd-consent)** | Gestão de cookies e consentimento em conformidade com a LGPD (Lei 13.709/18) — 100% pt-BR, zero dependências | Vanilla JS | MIT · `v1.0.2` |
 
 ---
 
-## Quick Start
+## Quick start
 
 ```bash
-# 9level-monitor — instale em 30 segundos
+# pgtui — instalação em uma linha (Linux/macOS, binário estático)
+curl -fsSL https://raw.githubusercontent.com/9level/pgtui/master/install.sh | sh
+```
+
+```bash
+# 9level-monitor — em 30 segundos, sem dependências externas
 git clone https://github.com/9LEVEL/9level-monitor
-cd 9level-monitor
-cp .env.example .env
-docker compose up -d
-
+cd 9level-monitor && cp .env.example .env && docker compose up -d
 # Acesse http://localhost:8100
-# Pronto. Sem dependências externas.
 ```
 
-```bash
-# lgpd-consent — 3 arquivos, zero config
-# Copie lgpd-consent.js, lgpd-consent.css e lgpd-consent-config.js para seu projeto
-# Adicione ao HTML:
-# <link rel="stylesheet" href="lgpd-consent.css">
-# <script src="lgpd-consent-config.js"></script>
-# <script src="lgpd-consent.js"></script>
-```
+`sysmon` (desktop + agente) e `lgpd-consent` (3 arquivos, zero config) têm o
+passo a passo completo no README de cada repositório.
 
 ---
 
-## Stack Tecnológico
+## O DNA técnico
 
-Todos os produtos compartilham o mesmo DNA técnico:
+O que os quatro têm em comum — e o que você pode esperar de qualquer coisa que
+publicarmos:
 
-- **Golang** — Backend único, binário estático, zero dependências externas
-- **Vue.js** — Frontend reativo, SPA leve, componentes reutilizáveis
-- **PostgreSQL** — Multi-tenant com row-level isolation, JSONB para flexibilidade
-- **Docker** — Deploy em Swarm ou Compose, registry privado, Traefik v3
-
----
-
-## Enterprise
-
-A **Community Edition** é gratuita e MIT. Use em produção, modifique, distribua.
-
-A **Enterprise Edition** adiciona:
-
-- Funcionalidades avançadas por produto
-- Suporte com SLA definido
-- Implantação assistida
-- Treinamento da equipe
-- Updates e patches prioritários
-
-→ [Falar com especialista](https://9level.com.br/contato)
+- **Go** — backend único, binário estático, **zero dependências externas**
+- **Self-hosted** — roda on-prem ou no seu cloud; seus dados ficam com você
+- **Leve** — sem runtime pesado, sem banco obrigatório onde não é preciso
+- **MIT** — use em produção, modifique, distribua
 
 ---
 
-## Por que 9LEVEL?
+## A missão
 
-Não somos um MSP tradicional nem uma software house genérica. Cada produto nasce de um problema real enfrentado na gestão de ambiente produtivo e dores de quem vive skin the game.
+Não somos um MSP tradicional nem uma software house genérica. Cada produto
+nasce de um problema real enfrentado operando ambiente crítico para setores
+regulados — e de quem vive o *skin in the game* da operação.
 
-Construímos o que usamos. Abrimos o que podemos.
+**Construímos o que usamos. Abrimos o que podemos.** Ferramentas que não
+dependem de nuvem de terceiro, que não prendem seus dados e que um sysadmin
+consegue subir sozinho, num binário.
 
+A maioria dos projetos é **100% MIT**. Onde existe uma **Enterprise Edition**
+(ex.: 9level-monitor), ela adiciona recursos avançados, suporte com SLA,
+implantação assistida e atualizações prioritárias — a Community Edition segue
+livre e completa.
+
+→ [Falar com um especialista](https://9level.com.br/contato)
 
 ---
 
 ## Contribuir
 
-Contribuições são bem-vindas! Para cada repositório:
+Contribuições são bem-vindas. Em qualquer repositório:
 
-1. Fork o projeto
-2. Crie sua branch (`git checkout -b feature/minha-feature`)
-3. Commit suas mudanças (`git commit -m 'feat: minha feature'`)
-4. Push para a branch (`git push origin feature/minha-feature`)
-5. Abra um Pull Request
-
-Usamos [Conventional Commits](https://www.conventionalcommits.org/) em todos os repositórios.
+1. Faça um fork e crie sua branch (`git checkout -b feat/minha-feature`)
+2. Commit seguindo [Conventional Commits](https://www.conventionalcommits.org/)
+3. Push e abra um Pull Request
 
 ---
 
@@ -109,6 +96,6 @@ Usamos [Conventional Commits](https://www.conventionalcommits.org/) em todos os 
 
 <div align="center">
 
-**9LEVEL** · Joinville, SC · Produtos de tecnologia para setores regulados
+**9LEVEL** · Joinville, SC · Ferramentas open source para infraestrutura crítica
 
 </div>
