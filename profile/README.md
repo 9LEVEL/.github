@@ -34,7 +34,7 @@ num binário estático. *(Antes chamado pgtui.)*
 curl -fsSL https://raw.githubusercontent.com/9LEVEL/pgtower/master/install.sh | sh
 ```
 
-→ **[github.com/9LEVEL/pgtower](https://github.com/9LEVEL/pgtower)**
+→ **[pgtower.dev](https://pgtower.dev)** · **[github.com/9LEVEL/pgtower](https://github.com/9LEVEL/pgtower)**
 
 ---
 
