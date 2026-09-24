@@ -11,21 +11,30 @@ binário único, zero dependências, roda no seu ambiente.
 
 ---
 
-## ⭐ Destaque — pgtui
+## ⭐ Destaque — pgtower
 
-**A ferramenta *premium* de administração PostgreSQL para sysadmins & DevOps.**
+<img src="https://raw.githubusercontent.com/9LEVEL/pgtower/master/docs/brand/logo.svg" width="64" height="64" align="left" alt="pgtower">
+
+**A torre de controle da sua frota PostgreSQL.**
 Open source (MIT), teclado-first — o *k9s do Postgres*, direto no seu terminal,
-num binário estático.
+num binário estático. *(Antes chamado pgtui.)*
 
-[![CI](https://github.com/9level/pgtui/actions/workflows/ci.yml/badge.svg)](https://github.com/9level/pgtui/actions/workflows/ci.yml)
-[![Release](https://img.shields.io/github/v/release/9level/pgtui?sort=semver)](https://github.com/9level/pgtui/releases/latest)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/9LEVEL/pgtui/blob/master/LICENSE)
+<br clear="left">
 
-- **Opere, não só navegue** — veja e mate sessões, gerencie roles/grants, crie e dropa databases, tudo com guardas contra erro destrutivo.
-- **Tuning de verdade** — advisor de conexões, editor `ALTER SYSTEM` (validado + `pg_reload_conf`) e **editor de `pg_hba` com safety-net anti-lockout** (backup + rollback automático se o login de admin quebrar).
+[![CI](https://github.com/9LEVEL/pgtower/actions/workflows/ci.yml/badge.svg)](https://github.com/9LEVEL/pgtower/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/9LEVEL/pgtower?sort=semver)](https://github.com/9LEVEL/pgtower/releases/latest)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/9LEVEL/pgtower/blob/master/LICENSE)
+
+- **Vários servidores, uma tecla** — produção, staging e o banco local na mesma lista; troque com `S`, teste todos de uma vez e, quando um cair, leia o motivo em linguagem clara (sem rota, recusado, `pg_hba`, senha, TLS).
+- **Opere, não só navegue** — veja e encerre sessões, árvore de bloqueios, roles e grants com o SQL mostrado antes, crie e remova databases — com guardas contra erro destrutivo e selo **PROD** em vermelho.
+- **Tuning de verdade** — advisor de configuração para a RAM/CPU do host, editor `ALTER SYSTEM` validado e **editor de `pg_hba` com backup e rollback automático** se o login de admin quebrar.
 - **Reset de senha com hash SCRAM-SHA-256** feito no cliente — a senha em texto nunca chega ao servidor nem aos logs.
 
-→ **[github.com/9LEVEL/pgtui](https://github.com/9LEVEL/pgtui)**
+```sh
+curl -fsSL https://raw.githubusercontent.com/9LEVEL/pgtower/master/install.sh | sh
+```
+
+→ **[github.com/9LEVEL/pgtower](https://github.com/9LEVEL/pgtower)**
 
 ---
 
@@ -68,7 +77,7 @@ A maioria dos projetos é **100% MIT**. Onde existe uma **Enterprise Edition**
 implantação assistida e atualizações prioritárias — a Community Edition segue
 livre e completa.
 
-→ [Falar com um especialista](https://9level.com.br/contato)
+→ [Falar com um especialista](https://9level.com.br/#contato)
 
 ---
 
